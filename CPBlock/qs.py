@@ -2,10 +2,10 @@ import sys
 import os
 import time
 import json
-from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QLabel, QPushButton, QFileDialog, QVBoxLayout, QHBoxLayout, QMenu, 
+from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QLabel, QPushButton, QFileDialog, QVBoxLayout, QHBoxLayout, QMenu, 
                              QMessageBox, QLineEdit, QCompleter)
-from PyQt6.QtGui import QIcon, QPainter, QBrush, QColor, QAction
-from PyQt6.QtCore import Qt, QPoint, QTimer, QPropertyAnimation, QEasingCurve
+from PySide6.QtGui import QIcon, QPainter, QBrush, QColor, QAction
+from PySide6.QtCore import Qt, QPoint, QTimer, QPropertyAnimation, QEasingCurve
 from PIL import Image
 
 class QuickStart(QMainWindow):

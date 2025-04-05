@@ -3,9 +3,9 @@ import os
 import json
 import base64
 import uuid
-from PyQt6.QtWidgets import (QApplication, QWidget, QLabel, QPushButton, QVBoxLayout, QMenu, QTextEdit, QDialog, QCheckBox)
-from PyQt6.QtGui import QPainter, QBrush, QColor, QAction
-from PyQt6.QtCore import Qt, QPoint, QTimer
+from PySide6.QtWidgets import (QApplication, QWidget, QLabel, QPushButton, QVBoxLayout, QMenu, QTextEdit, QDialog, QCheckBox)
+from PySide6.QtGui import QPainter, QBrush, QColor, QAction
+from PySide6.QtCore import Qt, QPoint, QTimer
 
 class HtmlWidget(QWidget):
     def __init__(self, config_path, parent=None, manager=None):

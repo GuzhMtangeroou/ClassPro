@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QWidget, QTabWidget, QVBoxLayout, QLabel, QApplication, QPushButton, QCheckBox
+from PySide6.QtWidgets import QWidget, QTabWidget, QVBoxLayout, QLabel, QApplication, QPushButton, QCheckBox
 import sys
 import json
 import os
