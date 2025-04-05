@@ -19,8 +19,7 @@
 > 当前为测试版，请勿使用！
 
 ## 协议
-此项目基于GPLv3许可证授权发布，详情请参阅 [LICENSE](./LICENSE) 文件。
-~~多骂一句：Qt我吃柠檬~~
+此项目基于MIT许可证授权发布，详情请参阅 [LICENSE](./LICENSE) 文件。
 
 Copyright © 2025 Limo.
 
