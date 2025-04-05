@@ -1,0 +1,5 @@
+PyQt6>=6.5
+Pillow>=10.0
+pywin32>=300
+requests>=2.26
+markdown>=3.0 
