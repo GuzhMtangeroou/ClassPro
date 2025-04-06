@@ -1,6 +1,7 @@
 import pystray,sys,os,threading,json
 from PIL import Image
 from CPCore import*
+import subprocess
 
 def load_settings():
     settings_file = os.path.join("data/app.json")
@@ -36,9 +37,12 @@ def exitapp(mode):
         "restart"：重启（不知道该放哪所以做到这来了）。
     """
     if mode == "defult":
-        os.system("taskkill /f /IM springboard.exe")
-        os.system(f"taskkill /f /PID {os.getpid()}")
+        subprocess.run(["taskkill", "/f", "/im", "python.exe"], 
+                      creationflags=subprocess.CREATE_NO_WINDOW)
+        subprocess.run(["taskkill", "/f", "/im", "pythonw.exe"],
+                      creationflags=subprocess.CREATE_NO_WINDOW)
     elif mode == "restart":
+
         p = sys.executable
         try:
             # 启动新程序(解释器路径, 当前程序)
@@ -61,10 +65,10 @@ if __name__ == "__main__":
     settings = load_settings()
     
     if settings.get("qs_enabled", True):
-        threading.Thread(target=lambda: os.system("springboard qs")).start()
+        threading.Thread(target=lambda: subprocess.run(["python", "springboard.py", "qs"], creationflags=subprocess.CREATE_NO_WINDOW)).start()
     if settings.get("md_widget_enabled", True):
-        threading.Thread(target=lambda: os.system("springboard mdwidget")).start()
+        threading.Thread(target=lambda: subprocess.run(["python", "springboard.py", "mdwidget"], creationflags=subprocess.CREATE_NO_WINDOW)).start()
     if settings.get("html_widget_enabled", True):
-        threading.Thread(target=lambda: os.system("springboard htmlwidget")).start()
+        threading.Thread(target=lambda: subprocess.run(["python", "springboard.py", "htmlwidget"], creationflags=subprocess.CREATE_NO_WINDOW)).start()
     
     baricon()

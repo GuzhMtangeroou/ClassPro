@@ -103,7 +103,7 @@ class SettingsWindow(QWidget):
             startup_folder = winshell.startup()
             
             # 获取当前程序的路径
-            exe_path = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), "cpmain.exe"))
+            exe_path = os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), "cpmain.py"))
             
             # 创建快捷方式
             shortcut_path = os.path.join(startup_folder, "ClassPro.lnk")
